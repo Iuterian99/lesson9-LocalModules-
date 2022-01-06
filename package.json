@@ -1,0 +1,26 @@
+{
+  "name": "local_modules",
+  "version": "1.0.0",
+  "description": "for learning local_modules & package.json",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iuterian99/lesson9-LocalModules-.git"
+  },
+  "author": "Abdukhalim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iuterian99/lesson9-LocalModules-/issues"
+  },
+  "homepage": "https://github.com/Iuterian99/lesson9-LocalModules-#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+  }
+}
