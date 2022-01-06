@@ -37,4 +37,29 @@ package.json kirish orqali proekt haqida 60-70% ma`lumot ovolsa bo`ladi!
 2) cmd terminalda "npm init -y" desak to`ldirilgan ma`lumotlarni tayyor chiqarib beradi
 
 note: cmd da "npm i nodemon --save-dev"  ---> deganimizada package.jsonga nodemonni "devDependencies" degan bo`limiga joylashtiradi va bu proektimiz davomida live server har bir o`zgarishni kuzatuvchi vazifasini bajaradi! 
+
+!bcrypt
+Bcrypt is a popular and trusted method for salt and hashing passwords. 
+A salt is a random string that makes the hash unpredictable. 
+note for installing bcrypt in cmd we should write "npm i bcrypt"
 */
+
+const bcrypt = require("bcrypt");
+const salt = 3;
+
+const password = "abdsc123";
+
+bcrypt.hash(password, salt, (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+
+bcrypt.compare(
+  // bu metod hashlangan kodni asl kod bilan solishtirishga kk bo`ladi!
+  password,
+  "$2b$04$oEFI9dWtrfWcoBOl46mw7Oz117yIGQNm7a0qzVeYbQI8gy2c1sBVq",
+  (err, data) => {
+    if (err) throw err;
+    console.log(data);
+  }
+);
